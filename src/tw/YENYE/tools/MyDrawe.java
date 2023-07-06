@@ -1,14 +1,13 @@
 package tw.YENYE.tools;
 
 import java.awt.BasicStroke;
-import java.awt.image.BufferedImage;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
-import java.awt.Stroke;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -18,8 +17,6 @@ import java.io.Serializable;
 import java.util.LinkedList;
 
 import javax.imageio.ImageIO;
-import javax.swing.DebugGraphics;
-import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class MyDrawe extends JPanel{
@@ -27,7 +24,7 @@ public class MyDrawe extends JPanel{
 	private Color nowColor;
 	
 	public MyDrawe() {
-		setBackground(Color.yellow);
+		setBackground(Color.WHITE);
 		
 		nowColor = Color.BLUE;
 		lines = new LinkedList<>();
@@ -109,7 +106,7 @@ public class MyDrawe extends JPanel{
 		
 		for(LineV2 line : lines) {
 			float tempR = 0f;
-			float width = 1.5f;
+			float width = 3f;
 			g2d.setColor(line.getColor());
 			for(int j=1; j<line.size(); j++) {
 				Point p0 = line.getPoint(j-1);
